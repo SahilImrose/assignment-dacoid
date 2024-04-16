@@ -7,27 +7,28 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="first-step">
+    <div id="step">
       <div class="p-5 grid content-between h-screen">
         <div class="skip-btn flex justify-end">
           <a href="#signup" class="underline text-indigo-300">Skip</a>
         </div>
         <div class="img-btn flex justify-center">
-          <img src="./lib/images/first.png" alt="" />
+          <img src="./lib/images/first.png" id="imgSteps" alt="" />
         </div>
         <div class="info">
-          <h3 class="text-xl font-medium">Track Your Goal</h3>
-          <p class="text-base text-gray-500">
+          <h3 class="text-xl font-medium" id="headlineSteps">
+            Track Your Goal
+          </h3>
+          <p class="text-base text-gray-500" id="describeSteps">
             Don&#39;t worry if you have trouble determining your goals, We can
             help you determine your goals and track your goals
           </p>
         </div>
-        <div
+        <a
           class="next-btn flex justify-end"
-          onclick="
-            document.getElementById('first-step').classList.toggle('hidden');
-            document.getElementById('second-step').classList.toggle('hidden');
-        "
+          id="next-btn"
+          href="#"
+          onclick="nextBtn()"
         >
           <svg
             width="60"
@@ -69,67 +70,21 @@
               </linearGradient>
             </defs>
           </svg>
+        </a>
+      </div>
+    </div>
+    <div id="signup">
+      <div class="p-5">
+        <h1 class="text-xl font-bold">Create an account.</h1>
+        <div class="text-inputs">
+          <input type="text" name="" placeholder="First Name" id="" class="bg-[#f1f1f1] h-10 my-3 w-full px-3 rounded">
+          <input type="text" name="" placeholder="Last Name" id="" class="bg-[#f1f1f1] h-10 my-3 w-full px-3 rounded">
+          <input type="email" name="" placeholder="Email" id="" class="bg-[#f1f1f1] h-10 my-3 w-full px-3 rounded">
+          <input type="password" name="" placeholder="Password" id="" class="bg-[#f1f1f1] h-10 my-3 w-full px-3 rounded">
         </div>
       </div>
     </div>
-    <div id="second-step" class="hidden">
-      <div class="p-5 grid content-between h-screen">
-        <div class="skip-btn flex justify-end">
-          <a href="#signup" class="underline text-indigo-300">Skip</a>
-        </div>
-        <div class="img-btn flex justify-center">
-          <img src="./lib/images/second.png" alt="" />
-        </div>
-        <div class="info">
-          <h3 class="text-xl font-medium">Get Burn</h3>
-          <p class="text-base text-gray-500">
-            Let&#39;s keep burning to achieve your goals, it hurts only
-            temporarily, if you give up now you will be in pain forever.
-          </p>
-        </div>
-        <div class="next-btn flex justify-end">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="30" cy="30" r="25" fill="url(#paint0_linear_1_37)" />
-            <mask id="path-2-inside-1_1_37" fill="white">
-              <path
-                d="M30 0C35.2291 6.2356e-08 40.3673 1.36677 44.9053 3.9648C49.4433 6.56283 53.2234 10.3019 55.8709 14.8112C58.5183 19.3206 59.9411 24.4436 59.9982 29.6724C60.0553 34.9011 58.7447 40.054 56.1964 44.6201L54.8824 43.8867C57.3029 39.5497 58.5477 34.6553 58.4935 29.6888C58.4392 24.7223 57.0878 19.8563 54.5732 15.5731C52.0585 11.29 48.468 7.73846 44.1577 5.27074C39.8473 2.80303 34.9668 1.50482 30 1.50482V0Z"
-              />
-            </mask>
-            <path
-              d="M30 0C35.2291 6.2356e-08 40.3673 1.36677 44.9053 3.9648C49.4433 6.56283 53.2234 10.3019 55.8709 14.8112C58.5183 19.3206 59.9411 24.4436 59.9982 29.6724C60.0553 34.9011 58.7447 40.054 56.1964 44.6201L54.8824 43.8867C57.3029 39.5497 58.5477 34.6553 58.4935 29.6888C58.4392 24.7223 57.0878 19.8563 54.5732 15.5731C52.0585 11.29 48.468 7.73846 44.1577 5.27074C39.8473 2.80303 34.9668 1.50482 30 1.50482V0Z"
-              stroke="#89A1FF"
-              stroke-width="2"
-              mask="url(#path-2-inside-1_1_37)"
-            />
-            <path
-              d="M27 36L33 30L27 24"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_1_37"
-                x1="5"
-                y1="29.1667"
-                x2="55"
-                y2="30"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#DEE5FF" />
-                <stop offset="1" stop-color="#809AFF" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
-    </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
